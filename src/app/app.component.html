@@ -8,7 +8,11 @@
   }  -->
 
   <!-- IMPORTANT: Without asterisk, the STRUCTURAL directive MUST be define in a wrapper tag -->
-  <ng-template appAuth="admin">
+  <!-- <ng-template appAuth="admin">
     <p>Only admins should see this!</p>
-  </ng-template>
+  </ng-template> -->
+
+  <!-- NOTE: With prefix asterisk, Angular understands that under de hood it has a template, so we can safe it  -->
+  <!-- Also, the expresión after equal (=) is evaluated as TypeScript expression instead of a string -->
+  <p *appAuth="'admin'">Only admins should see this!</p>
 </main>
