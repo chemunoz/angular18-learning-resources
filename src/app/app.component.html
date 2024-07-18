@@ -1,11 +1,14 @@
 <main>
   <app-learning-resources />
-
   <hr />
-
   <app-auth />
 
-  @if(isAdmin()){
+  <!-- @if(isAdmin()){
   <p>Only admins should see this!</p>
-  }
+  }  -->
+
+  <!-- IMPORTANT: Without asterisk, the STRUCTURAL directive MUST be define in a wrapper tag -->
+  <ng-template appAuth="admin">
+    <p>Only admins should see this!</p>
+  </ng-template>
 </main>

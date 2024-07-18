@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SafeLinkDirective } from '@app/directives/safe-link.directive';
+import { SafeLinkDirective } from '@directives/safe-link.directive';
 
 @Component({
   selector: 'app-learning-resources',
