@@ -14,5 +14,13 @@
 
   <!-- NOTE: With prefix asterisk, Angular understands that under de hood it has a template, so we can safe it  -->
   <!-- Also, the expresión after equal (=) is evaluated as TypeScript expression instead of a string -->
-  <p *appAuth="'admin'">Only admins should see this!</p>
+  <p *appAuth="'admin'" class="protected-content admin">
+    Only admins should see this!
+  </p>
+  <p *appAuth="'user'" class="protected-content unauthenticated">
+    Regular users should see this!
+  </p>
+  <p *appAuth="'guest'" class="protected-content authenticated">
+    Guest users should see this!
+  </p>
 </main>
